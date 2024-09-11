@@ -14,10 +14,10 @@ La concentration en cyanobactéries est une variable difficile à prédire. Nous
 Après avoir traité et nettoyé les données, et découpé le jeu de données en plusieurs sous-ensembles, nous présentons les résultats sur l'ensemble de test.
 
 Les résultats sont obtenus avec une cellule LSTM. Nous prédisons la température de l'eau à 0,5 m de profondeur en utilisant comme entrée la température de l'air pour le jour suivant (série temporelle échantillonnée toutes les 1h15), ainsi que la température de l'eau aux instants passés et à l'instant présent. Voici le résultat obtenu :
-![Prédiction de la température de l'eau à 0.5m](images/templstm.png)
+![Prédiction de la température de l'eau à 0.5m](images/templstm.pdf)
 
 Nous procédons de la même manière pour la concentration en chlorophylle. Les entrées sont la température de l'eau, la concentration en oxygène et la température de l'air. Voici la courbe obtenue :
-![Concentration en chlorophylle](images/chloro.png)
+![Concentration en chlorophylle](images/chloro.pdf)
 
 ### Erreurs
 
@@ -34,8 +34,14 @@ Nous passons ainsi à la modélisation avec les PINNs.
 ## Résultats de Modélisation
 
 Les résultats du LSTM n'étant pas satisfaisants, nous essayons de montrer dans cette section que l'ajout d'une contrainte physique peut améliorer notre apprentissage. Nous montrons cela à travers la modélisation d'un profil de température dans une colonne d'eau, en contraignant un réseau entièrement connecté avec la simple équation de la chaleur. Bien que cette approche soit naïve, elle permet de réaliser une preuve de concept du PINN. Voici les résultats obtenus :
-![Profils de température avec contrainte physique et sans](images/temppinn1.png)
-![Profils de température avec contrainte physique et sans](images/temppinn2.png)
+
+<div style="text-align: center;">
+    <img src="images/temppinn1.png" alt="Description de l'image" style="width: 60%; height: auto;">
+</div>
+<div style="text-align: center;">
+    <img src="images/temppinn2.png" alt="Description de l'image" style="width: 60%; height: auto;">
+</div>
+
 
 
 Les graphiques montrent que la contrainte physique a permis d'améliorer l'interpolation entre nos données (les points colorés). Le résultat est donc encourageant et il est maintenant nécessaire d'appliquer des systèmes plus complexes que l'équation de la chaleur. Cette approche peut également être transposée à la concentration en chlorophylle.
