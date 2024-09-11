@@ -34,7 +34,8 @@ Nous passons ainsi à la modélisation avec les PINNs.
 ## Résultats de Modélisation
 
 Les résultats du LSTM n'étant pas satisfaisants, nous essayons de montrer dans cette section que l'ajout d'une contrainte physique peut améliorer notre apprentissage. Nous montrons cela à travers la modélisation d'un profil de température dans une colonne d'eau, en contraignant un réseau entièrement connecté avec la simple équation de la chaleur. Bien que cette approche soit naïve, elle permet de réaliser une preuve de concept du PINN. Voici les résultats obtenus :
-![Profils de température avec contrainte physique et sans](images/temppinn.png)
+![Profils de température avec contrainte physique et sans](images/temppinn1.png)
+![Profils de température avec contrainte physique et sans](images/temppinn2.png)
 
 
 Les graphiques montrent que la contrainte physique a permis d'améliorer l'interpolation entre nos données (les points colorés). Le résultat est donc encourageant et il est maintenant nécessaire d'appliquer des systèmes plus complexes que l'équation de la chaleur. Cette approche peut également être transposée à la concentration en chlorophylle.
