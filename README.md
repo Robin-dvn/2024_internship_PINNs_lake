@@ -15,13 +15,13 @@ Après avoir traité et nettoyé les données, et découpé le jeu de données e
 
 Les résultats sont obtenus avec une cellule LSTM. Nous prédisons la température de l'eau à 0,5 m de profondeur en utilisant comme entrée la température de l'air pour le jour suivant (série temporelle échantillonnée toutes les 1h15), ainsi que la température de l'eau aux instants passés et à l'instant présent. Voici le résultat obtenu :
 <div style="text-align: center;">
-    <img src="images/templstm.pdf" alt="Description de l'image" style="width: 60%; height: auto;">
+    <img src="images/templstm.png" alt="Description de l'image" style="width: 60%; height: auto;">
 </div>
 
 
 Nous procédons de la même manière pour la concentration en chlorophylle. Les entrées sont la température de l'eau, la concentration en oxygène et la température de l'air. Voici la courbe obtenue :
 <div style="text-align: center;">
-    <img src="images/chloro.pdf" alt="Description de l'image" style="width: 60%; height: auto;">
+    <img src="images/chloro.png" alt="Description de l'image" style="width: 60%; height: auto;">
 </div>
 
 ### Erreurs
